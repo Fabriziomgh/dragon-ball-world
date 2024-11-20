@@ -5,9 +5,7 @@ import CharacterTransformations from '@/components/customs/CharacterTransformati
 import { Metadata } from 'next';
 
 interface Params {
-   params: {
-      id: string;
-   };
+   params: Promise<{ id: string }>;
 }
 
 export async function generateMetadata({ params }: Params): Promise<Metadata> {
@@ -20,7 +18,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
    };
 }
 
-export default async function ({ params }: Params) {
+export default async function SingleCharacter({ params }: Params) {
    const { id } = await params;
 
    const character = await getSingleCharacter(id);

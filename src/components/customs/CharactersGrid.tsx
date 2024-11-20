@@ -11,7 +11,7 @@ const CharactersGrid = () => {
 
    useEffect(() => {
       getAllCharacters();
-   }, []);
+   }, [getAllCharacters]);
    return (
       <div className="phone:grid-cols-1 phone:gap-x-0 grid grid-cols-3 gap-x-6 gap-y-4  col-span-2">
          {characters.map((character) => {

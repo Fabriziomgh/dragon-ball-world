@@ -6,7 +6,7 @@ export const metadata = {
    description: 'Listado de planetas del mundo Dragon Ball',
 };
 
-export default async function () {
+export default async function PlanetasPage() {
    const { items: planets } = await GetAllPlanets();
    return <PlanetsGrid planets={planets} />;
 }

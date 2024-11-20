@@ -1,9 +1,4 @@
-import {
-   APIResponse,
-   APIResponsePlanets,
-   OriginPlanet,
-   SingleCharacter,
-} from '@/types';
+import { APIResponse, APIResponsePlanets, SingleCharacter } from '@/types';
 import axios from 'axios';
 
 const APIDragonBall = axios.create({
